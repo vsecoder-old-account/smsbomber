@@ -1,3 +1,5 @@
 requests
 aiogram
 sqlalchemy
+fake-useragent
+user-agent
