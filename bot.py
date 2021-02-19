@@ -136,6 +136,7 @@ def send_for_number(phone):
 	iteration = 0
 	_email = _name + f'{iteration}' + '@gmail.com'
 	email = _name + f'{iteration}' + '@gmail.com'
+	_phone = phone
 	_phoneNEW = _phone[3:]
 	_phone9 = _phone[1:]
 	_phoneAresBank = '+' + _phone[0] + '(' + _phone[1:4] + ')' + _phone[4:7] + '-' + _phone[7:9] + '-' + _phone[
