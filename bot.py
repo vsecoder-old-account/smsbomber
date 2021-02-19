@@ -137,7 +137,7 @@ def send_for_number(phone):
 	_email = _name + f'{iteration}' + '@gmail.com'
 	email = _name + f'{iteration}' + '@gmail.com'
 	_phone = phone
-	_phoneNEW = _phone[3:]
+	_phoneNEW = phone[3:]
 	_phone9 = _phone[1:]
 	_phoneAresBank = '+' + _phone[0] + '(' + _phone[1:4] + ')' + _phone[4:7] + '-' + _phone[7:9] + '-' + _phone[
 													   9:11]  # +7+(915)350-99-08
@@ -167,15 +167,14 @@ def send_for_number(phone):
 			for i in str_list:
 				maska = maska.replace("X", i, 1)
 			return mask
-	while message.chat.id in running_spams_per_chat_id:
-		_name = ''
-		for x in range(12):
-			_name = _name + random.choice(list('123456789qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM'))
-			password = _name + random.choice(list('123456789qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM'))
-			username = _name + random.choice(list('123456789qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM'))
-		_nameR = ['Александр', 'Алексей', 'Анатолий', 'Андрей', 'Антон', 'Аркадий', 'Арсений', 'Артём', 'Артур', 'Борис', 'Вадим', 'Валентин', 'Валерий', 'Василий', 'Виктор', 'Виталий', 'Владимир', 'Владислав', 'Вячеслав', 'Георгий', 'Глеб', 'Григорий', 'Даниил', 'Денис', 'Дмитрий', 'Евгений', 'Егор', 'Иван', 'Игорь', 'Илья', 'Кирилл', 'Константин', 'Лев', 'Леонид', 'Максим', 'Марк', 'Матвей', 'Михаил', 'Никита', 'Николай', 'Олег', 'Павел', 'Пётр', 'Роман', 'Руслан', 'Сергей', 'Степан', 'Тимур', 'Фёдор', 'Юрий', 'Ярослав']
-		_email = _name + f'{iteration}' + '@gmail.com'
-		email = _name + f'{iteration}' + '@gmail.com'
+	_name = ''
+	for x in range(12):
+		_name = _name + random.choice(list('123456789qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM'))
+		password = _name + random.choice(list('123456789qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM'))
+		username = _name + random.choice(list('123456789qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM'))
+	_nameR = ['Александр', 'Алексей', 'Анатолий', 'Андрей', 'Антон', 'Аркадий', 'Арсений', 'Артём', 'Артур', 'Борис', 'Вадим', 'Валентин', 'Валерий', 'Василий', 'Виктор', 'Виталий', 'Владимир', 'Владислав', 'Вячеслав', 'Георгий', 'Глеб', 'Григорий', 'Даниил', 'Денис', 'Дмитрий', 'Евгений', 'Егор', 'Иван', 'Игорь', 'Илья', 'Кирилл', 'Константин', 'Лев', 'Леонид', 'Максим', 'Марк', 'Матвей', 'Михаил', 'Никита', 'Николай', 'Олег', 'Павел', 'Пётр', 'Роман', 'Руслан', 'Сергей', 'Степан', 'Тимур', 'Фёдор', 'Юрий', 'Ярослав']
+	_email = _name + f'{iteration}' + '@gmail.com'
+	email = _name + f'{iteration}' + '@gmail.com'
 	try:
 	  requests.post('https://secure.ubki.ua/b2_api_xml/ubki/auth', json={"doc": {
 		"auth": {"mphone": "+" + _phone, "bdate": "11.11.1999", "deviceid": "00100", "version": "1.0",
